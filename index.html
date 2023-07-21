@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Dress Store</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Register Dress</h1>
+
+        <form action="{{ url_for('add_dress') }}" method="post">
+            <div class="form-group">
+                <label for="desc">Description:</label>
+                <input type="text" class="form-control" id="desc" name="desc" required>
+            </div>
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <input type="text" class="form-control" id="size" name="size" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" class="form-control" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price" name="price" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register Dress</button>
+        </form>
+
+        <form action="{{ url_for('search_dress') }}" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="search_query">Search Dress:</label>
+                <input type="text" class="form-control" id="search_query" name="search_query" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+    </div>
+</body>
+</html>
+
+
+
+
